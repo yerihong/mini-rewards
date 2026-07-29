@@ -10,6 +10,10 @@ HeyMax Product take-home (~4–5 hours).
 
 Angular for the UI, Express for the API (same code exports as a Cloud Function), Firestore for storage. Runs on the Firestore Emulator so you don't need a Firebase project to try it.
 
+## What I prioritized after core flow
+
+The assignment asks you to finish the happy path first, then spend remaining time on what matters for production. Once earn / balance / redeem / history worked, I focused on **webhook idempotency**, **atomic redeem**, and **input validation**. Partner retries and accidental double-credits are painful to unwind — similar to payment webhooks I've handled in production.
+
 ## Design choices
 
 ### Ledger + balance

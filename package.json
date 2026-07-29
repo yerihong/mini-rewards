@@ -1,0 +1,21 @@
+{
+  "name": "heymax-mini-rewards",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HeyMax Software Engineer - Product take-home: mini rewards integration",
+  "scripts": {
+    "build:functions": "npm --prefix functions run build",
+    "firestore": "npx firebase emulators:start --only firestore",
+    "api": "FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 GCLOUD_PROJECT=heymax-mini-rewards PORT=3001 node functions/lib/local-server.js",
+    "seed": "FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 GCLOUD_PROJECT=heymax-mini-rewards npm --prefix functions run seed",
+    "web": "npm --prefix web start",
+    "demo:curl": "API_BASE=http://127.0.0.1:3001 bash scripts/demo-curl.sh",
+    "test": "npm --prefix functions test"
+  },
+  "devDependencies": {
+    "firebase-tools": "^13.35.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

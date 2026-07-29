@@ -1,0 +1,10 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Demo: all writes go through Cloud Functions (Admin SDK).
+    // Client SDK is not used for mutations in this assignment.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

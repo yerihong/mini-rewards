@@ -1,0 +1,29 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "Mini rewards API for HeyMax take-home",
+  "main": "lib/index.js",
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "seed": "node lib/seed.js",
+    "serve": "npm run build && firebase emulators:start --only functions,firestore",
+    "test": "npm run build && node --test lib/rewards.validation.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.10.0",
+    "firebase-functions": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/node": "^26.1.2",
+    "typescript": "^5.8.3"
+  },
+  "private": true
+}

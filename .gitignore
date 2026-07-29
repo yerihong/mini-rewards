@@ -1,0 +1,25 @@
+node_modules/
+lib/
+dist/
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+*.log
+.DS_Store
+web/dist/
+web/.angular/
+functions/lib/
+.env
+.env.local
+.env.*.local
+*.local
+# Secrets / credentials — never commit
+serviceAccount*.json
+*-firebase-adminsdk*.json
+*.pem
+secrets/
+# Emulator persistence / exports
+emulator-data/
+firestore-export/
+firebase-export-*/
